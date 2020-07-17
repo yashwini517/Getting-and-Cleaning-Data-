@@ -80,10 +80,10 @@ unzip(zipfile = "./UCIHARDATASET/projectdataset.zip", exdir = "./UCIHARDATASET")
 # 5. Creating independent tidy data set #
         
         # Making a second tidy data set#
-        tidySet <- aggregate(. ~subjectID + activityID, setWithActivityNames, mean)
-        tidySet <- tidySet[order(tidySet$subjectID, tidySet$activityID), ]
+        tidyset <- aggregate(. ~subjectID + activityID, setWithActivityNames, mean)
+        tidyset <- tidyset[order(tidySet$subjectID, tidySet$activityID), ]
         
         # Writing second tidy data set into a txt file #
-        write.table(tidySet, "tidySet.txt", row.names = FALSE)
+        write.table(tidyset, "tidyset.txt", row.names = FALSE)
         
         #Help for this assignment was taken from sources such as Github and RPub#
